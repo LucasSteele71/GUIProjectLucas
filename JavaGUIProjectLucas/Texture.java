@@ -30,8 +30,12 @@ public class Texture {
     }
 
     //The texture png files
-    public static Texture wood = new Texture("assets/wood.png", 64);
-    public static Texture brick = new Texture("assets/Brick.png", 64);
-    public static Texture bluestone = new Texture("assets/BlueStone.png", 64);
-    public static Texture stone = new Texture("assets/GreyBrick.png", 64);
+    public static Texture wall = new Texture("JavaGUIProjectLucas\\assets\\CircusWall.png", 64);
+    public static Texture key = new Texture("JavaGUIProjectLucas/assets/Key.png", 64);
+    public static Texture doorClosed = new Texture("JavaGUIProjectLucas/assets/DoorClosed.png", 64);
+    public static Texture doorOpened = new Texture("JavaGUIProjectLucas/assets/DoorOpened.png", 64);
+    public static Texture clown = new Texture("JavaGUIProjectLucas/assets/ScaryClown (1).png", 64);
+    public static Texture brick = new Texture("JavaGUIProjectLucas/assets/Brick.png", 64);
+    public static Texture stripes = new Texture("JavaGUIProjectLucas\\assets\\Stripes.png", 64);
+    public static Texture triangles = new Texture("JavaGUIProjectLucas\\assets\\Triangles.png", 64);
 }
