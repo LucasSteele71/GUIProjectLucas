@@ -53,6 +53,7 @@ public class Game extends JFrame implements Runnable{
 
 	public Game(){
 		thread = new Thread(this);
+		//Creates a new buffered image with the dimensions of the screen
 		image = new BufferedImage(640, 480, BufferedImage.TYPE_INT_RGB);
 		pixels = ((DataBufferInt)image.getRaster().getDataBuffer()).getData();
 		//Adds all of the textures used to the world
@@ -65,6 +66,7 @@ public class Game extends JFrame implements Runnable{
 		textures.add(Texture.key);
 		textures.add(Texture.doorClosed);
 		textures.add(Texture.doorOpened);
+		//Sets up a basic jframe
 		setSize(640, 480);
 		setResizable(false);
 		setTitle("Theme Park");
@@ -72,6 +74,7 @@ public class Game extends JFrame implements Runnable{
 		setBackground(Color.black);
 		setLocationRelativeTo(null);
 		setVisible(true);
+		//Creates all of the instances of the objects the game needs
 		camera = new Camera(11, 3, 1, 0, 0, -.66);
 		pathfinder = new Pathfinder(this, camera);
 		addKeyListener(camera);
@@ -126,10 +129,10 @@ public class Game extends JFrame implements Runnable{
 		while(loop){
 		keyCol = rand.nextInt(9);
 		keyRow = rand.nextInt(15);
+		//Checks if the random location is empty space and not a wall
+		//If it is the key will be placed and the loop breaks, if not the loop will countinue
 		if(map[keyCol][keyRow] == 0){
 			map[keyCol][keyRow] = 6;
-			System.out.println(keyCol);
-			System.out.println(keyRow);
 			key = new Key(keyCol, keyRow);
 			this.actors.add(key);
 			break;
@@ -168,9 +171,6 @@ public class Game extends JFrame implements Runnable{
 			//renders the screen 
 			render();
 		}
-	}
-	public static void main(String[] args){
-		Game game = new Game();
 	}
 }
 

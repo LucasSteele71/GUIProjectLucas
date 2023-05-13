@@ -11,6 +11,7 @@ public class Texture {
     public final int SIZE;
     public ArrayList<Texture> textures;
 
+    //Initialises a new texture
     public Texture(String location, int size){
         loc = location;
         SIZE = size;
@@ -19,6 +20,7 @@ public class Texture {
     }
 
     private void load(){
+        //Creates a buffered image of the file that has been sent
         try{
             BufferedImage image = ImageIO.read(new File(loc));
             int w = image.getWidth();

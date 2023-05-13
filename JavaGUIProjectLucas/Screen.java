@@ -16,6 +16,8 @@ public class Screen {
     }
 
         public int[] update(Camera camera, int[] pixels){
+            //The update starts by clearing the screen and making the bottom half a light gray and the top a dark gray
+            //this difference is used to make the floor and ceiling
             for(int n = 0; n < pixels.length/2; n++){
                 if(pixels[n] != Color.DARK_GRAY.getRGB()) pixels[n] = Color.DARK_GRAY.getRGB();
             }
